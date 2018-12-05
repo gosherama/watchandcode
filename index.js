@@ -1,16 +1,34 @@
-//Take an array and remove every second element out of that array. 
-//Always keep the first element and start removing with the next element.
-var arr = ['test1', 'test2', 'test3', 'test4', 'test5'];
-var output = [];
+var todos = ['item 1', 'item 2', 'item 3', 'item 4'];
 
-function removeEveryOther(arr){
-    for(var i = 0; i <= arr.length; i++) {
-        if (arr[i] % 2 == 0) {
-            arr.shift(i);
-            output = ouput + i
-        };
-    }
-    return output;
-  }
-console.log(removeEveryOther(arr))
+// Display todos
+function displayTodos() {
+    console.log('My Todos:', todos);
+}
+
+// Add new todos
+function addTodo(todo) {
+    // Add todo item at the end of the todos array
+    todos.push(todo);
+    displayTodos();
+}
+
+// Change todo
+function changeTodo(position,newValue) {
+    todos[position] = newValue;
+    displayTodos();
+}
+
+// Delete todo
+function deleteTodo(position) {
+    todos.splice(position,1);
+    displayTodos();
+}
+
+addTodo('item 0')
+//changeTodo(0,'changed again')
+//deleteTodo(1)
+
+
+
+
 
