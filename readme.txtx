@@ -4,3 +4,8 @@ Version 1.
 - It should have a place to add new todos
 - It should have a place to change todos
 - It should have a place to delete todos
+Version 2.
+- It should have a function to display todos
+- it should have a function to add todos
+- it should have a function to change todos
+- it should have a function to delete todos
