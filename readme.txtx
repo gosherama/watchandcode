@@ -1,18 +1,22 @@
-Version 1.
+Version 1. Array
 - It should have a place to store todos
 - It should have a place to display todos
 - It should have a place to add new todos
 - It should have a place to change todos
 - It should have a place to delete todos
-Version 2.
+Version 2. Function
 - It should have a function to display todos
 - it should have a function to add todos
 - it should have a function to change todos
 - it should have a function to delete todos
-Version 3.
+Version 3. Objects
 - It should store todos array on an object
 - it should have a display todos method
 - it should have a add todos method
 - it should have a change todos method
 - it should have a delete todos method
+Version 4. Booleans
+ - todoList.addTodo should add an Object
+ - todoList.changeTodo should change the todoText property
+ - todoList.toggleCompleted should change the completed property
 
