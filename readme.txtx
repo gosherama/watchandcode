@@ -19,4 +19,7 @@ Version 4. Booleans
  - todoList.addTodo should add an Object
  - todoList.changeTodo should change the todoText property
  - todoList.toggleCompleted should change the completed property
-
+Version 5. Loops
+- .displayTodos should show .todoText
+- .displayTodos should tell if .todos is empty
+- .displayTodos should show .completed
