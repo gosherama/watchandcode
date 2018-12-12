@@ -61,8 +61,18 @@ var todolist = {
     }
 };
 
+// Get access to display todos button
+var displayTodosButton = document.getElementById('displayTodosButton');
+// Run display todos method
+displayTodosButton.addEventListener('click', function() {
+    todolist.displayTodos()
+});
 
-
+// Access toggleAll button
+var toggleAllButton = document.getElementById('toggleAllButton');
+toggleAllButton.addEventListener('click', function() {
+    todolist.toggleAll();
+});
 
 
 
