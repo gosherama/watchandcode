@@ -4,12 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-<h1>To Do list v.1</h1>
-    <button id="displayTodosButton">Display ToDos</button>
-    <button id="toggleAllButton">Toggle All</button>
+<h1 id='header_name'>To Do list v.8</h1>
+<!-- Version Table -->
+<table>
+  <tr>
+    <td>V.1 - V.6</td>
+    <td>Console version - Add, update, remove, display & toggle / toggleAll todos</td>
+  </tr>
+  <tr>
+    <td>V.7</td>
+    <td>DOM - Display / ToggleAll btn</td>
+  </tr>
+  <tr>
+    <td>V.8</td>
+    <td>DOM - Data input (add, change, delete, toggle)</td>
+  </tr>
+</table>
+<br><br>
+<!-- To do List -->
+  <div>
+    <button onclick='handlers.displayTodos()'>Display ToDos</button>
+    <button onclick='handlers.toggleAll()'>Toggle All</button>
+  </div>
+  <div>
+    <button onclick='handlers.addTodo()'>Add</button>
+    <input type="text" id="addTodoTextInput" placeholder="Enter a todo.....">
+  </div>
+  <div>
+    <button onclick='handlers.changeTodo()'>Change Todo</button>
+    <input type="number" id="changeTodoPositionInput">
+    <input type="text" id="changeTodoTextInput">
+  </div>
+  <div>
+    <button onclick='handlers.deleteTodo()'>Delete</button>
+    <input type="number" id="deleteTodoPositionInput">
+  </div>
+  <div>
+    <button onclick='handlers.toggleCompleted()'>Toggle Completed</button>
+    <input type="number" id="toggleCompletedPositionInput">
+  </div>
+
 <script src="index.js"></script>
 </body>
 </html>

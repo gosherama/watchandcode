@@ -44,7 +44,6 @@ var todolist = {
                 completedTodos++;
             }
         }
-
         // if everything's true, make everything false
         if(completedTodos === totalTodos) {
         // Case 1. Make everything false
@@ -61,20 +60,39 @@ var todolist = {
     }
 };
 
-// Get access to display todos button
-var displayTodosButton = document.getElementById('displayTodosButton');
-// Run display todos method
-displayTodosButton.addEventListener('click', function() {
-    todolist.displayTodos()
-});
-
-// Access toggleAll button
-var toggleAllButton = document.getElementById('toggleAllButton');
-toggleAllButton.addEventListener('click', function() {
+// Object to handle events
+var handlers = {
+  displayTodos: function() {
+      todolist.displayTodos();
+  },
+  addTodo: function() {
+    var addTodoText = document.getElementById('addTodoTextInput');
+    todolist.addTodo(addTodoTextInput.value);
+    // Clear the input box
+    addTodoTextInput.value = '';
+  },
+  changeTodo: function() {
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+    // .value for text - valueAsNumber for numerical input
+    todolist.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+    // clear values
+    changeTodoPositionInput.value = '';
+    changeTodoTextInput.value = '';
+  },
+  deleteTodo: function() {
+    var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+    todolist.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+    deleteTodoPositionInput.value = '';
+  },
+  toggleCompleted: function() {
+    var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+    todolist.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+    toggleCompletedPositionInput.value = '';
+  },
+  toggleAll: function() {
     todolist.toggleAll();
-});
-
-
-
+  }
+  };
 
 
